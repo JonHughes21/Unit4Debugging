@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Unit4Debugging {
+	public static void main(String args[]) {
+		
+		Scanner input = new Scanner(System.in);
+		
+		int option, degree1, celsius1, fahrenheit1;
+		
+		System.out.printf("%s\n%s\n%s\n", "1 for Fahrenheit to Celsius", "2 for Celsius to Fahrenheit", "3 to quit:");
+		option = input.nextInt();		
+		
+		while (option != 3) {
+			
+			if (option == 1) {
+				System.out.println("Enter the degrees in Fahrenheit: ");
+				degree1 = input.nextInt();
+				
+				celsius1 = (degree1 - 32) * 5 / 9;
+				System.out.printf("The temp in Celsius is %d\n", celsius1);
+			}			
+			if (option == 2) {
+				System.out.println("Enter the degrees in Celsius: ");
+				degree1 = input.nextInt();
+				
+				fahrenheit1 = (degree1 * 9 / 5) + 32;
+				System.out.printf("The temp in Fahrenheit is %d\n",  fahrenheit1);
+			}
+				System.out.printf("%s\n%s\n%s\n", "1 for Fahrenheit to Celsius", "2 for Celsius to Fahrenheit", "3 to quit:");
+				option = input.nextInt();
+		}
+	}
+}
